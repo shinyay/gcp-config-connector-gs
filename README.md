@@ -54,6 +54,25 @@ $ gcloud iam service-accounts add-iam-policy-binding shinyay-config@(gcloud conf
     --role roles/iam.workloadIdentityUser
 ```
 
+#### Config Connector Configuration
+
+Replace `PROJECT_ID` to you PROJECT ID amd apply it.
+
+configconnector.yml
+```yaml
+apiVersion: core.cnrm.cloud.google.com/v1beta1
+kind: ConfigConnector
+metadata:
+  name: configconnector.core.cnrm.cloud.google.com
+spec:
+ mode: cluster
+ googleServiceAccount: shinyay-config@<PROJECT_ID>.iam.gserviceaccount.com
+```
+
+```shell
+$ kubectl apply -f configconnector.yml
+```
+
 ## Usage
 
 ## Installation
