@@ -73,6 +73,12 @@ spec:
 $ kubectl apply -f configconnector.yml
 ```
 
+#### Specifiy the Namespace
+
+```shell
+$ kubectl create namespace config-connector
+```
+
 ## Usage
 
 ## Installation
