@@ -90,6 +90,18 @@ $ kubectl wait -n cnrm-system --for=condition=Ready pod --all
 ```
 
 ## Usage
+### Supported resources list
+```shell
+$ kubectl get crds --selector cnrm.cloud.google.com/managed-by-kcc=true
+```
+
+### Create YAML Configuration
+- [gke-route-based-cluster.yml](https://cloud.google.com/config-connector/docs/reference/resource-docs/container/containercluster#routes_based_container_cluster)
+
+### Apply YAML Configuration
+```shell
+$ kubectl apply -n config-connector -f gke-route-based-cluster.yml
+```
 
 ## Installation
 
