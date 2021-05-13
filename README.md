@@ -47,6 +47,13 @@ $ gcloud projects add-iam-policy-binding (gcloud config get-value project) \
     --role roles/owner
 ```
 
+Bind **Service Account** and the predefined **Kubernetes Service Account**
+```
+$ gcloud iam service-accounts add-iam-policy-binding shinyay-config@(gcloud config get-value project).iam.gserviceaccount.com \
+    --member serviceAccount:(gcloud config get-value project).svc.id.goog[cnrm-system/cnrm-controller-manager] \
+    --role roles/iam.workloadIdentityUser
+```
+
 ## Usage
 
 ## Installation
