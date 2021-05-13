@@ -77,6 +77,12 @@ $ kubectl apply -f configconnector.yml
 
 ```shell
 $ kubectl create namespace config-connector
+$ kubectl annotate namespace config-connector cnrm.cloud.google.com/project-id=(gcloud config get-value project)
+```
+
+#### Verify the installation
+```shell
+$ kubectl wait -n cnrm-system --for=condition=Ready pod --all
 ```
 
 ## Usage
