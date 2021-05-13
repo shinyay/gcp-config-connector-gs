@@ -32,6 +32,14 @@ $ gcloud container clusters create config-connector-cluster \
     --workload-pool (gcloud config get-value project).svc.id.goog \
     --enable-stackdriver-kubernetes
 ```
+
+#### Service Account for Workload Identity
+
+Create Service Account
+```shell
+$ gcloud iam service-accounts create shinyay-config
+```
+
 ## Usage
 
 ## Installation
