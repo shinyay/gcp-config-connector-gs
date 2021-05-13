@@ -15,10 +15,14 @@ Config Connector provides a method to configure the following resources
 - feature:2
 
 ## Requirement
+- Resouce Manager API
 - GKE Add-on
 - Default Namespace
-- Resouce Manager API
 
+### Resouce Manager API
+```shell
+$ gcloud services enable cloudresourcemanager.googleapis.com
+```
 ### GKE Add-on
 Create the cluster with the followings:
 
