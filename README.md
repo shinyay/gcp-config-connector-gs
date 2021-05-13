@@ -40,6 +40,13 @@ Create Service Account
 $ gcloud iam service-accounts create shinyay-config
 ```
 
+Give Service Account permissions on the Project
+```
+$ gcloud projects add-iam-policy-binding (gcloud config get-value project) \
+    --member serviceAccount:shinyay-config@(gcloud config get-value project).iam.gserviceaccount.com \
+    --role roles/owner
+```
+
 ## Usage
 
 ## Installation
