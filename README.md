@@ -15,7 +15,23 @@ Config Connector provides a method to configure the following resources
 - feature:2
 
 ## Requirement
+- GKE Add-on
+- Default Namespace
+- Resouce Manager API
 
+### GKE Add-on
+Create the cluster with the followings:
+
+- Config Connector add-on
+- Worload Identity
+- Kubernetes Engine Monitoring
+
+```shell
+$ gcloud container clusters create config-connector-cluster \
+    --addons ConfigConnector \
+    --workload-pool (gcloud config get-value project).svc.id.goog \
+    --enable-stackdriver-kubernetes
+```
 ## Usage
 
 ## Installation
