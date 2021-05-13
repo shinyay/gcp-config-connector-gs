@@ -103,6 +103,16 @@ $ kubectl get crds --selector cnrm.cloud.google.com/managed-by-kcc=true
 $ kubectl apply -n config-connector -f gke-route-based-cluster.yml
 ```
 
+#### Verify the resource
+```shell
+$ kubectl describe -n config-connector containercluster
+```
+
+#### Delete the resource
+```shell
+$ kubectl delete -n config-connector -f gke-route-based-cluster.yml
+```
+
 ## Installation
 
 ## References
